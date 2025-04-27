@@ -1,0 +1,76 @@
+.header {
+    margin: 0 2.5rem;
+    padding: .5rem 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Removes underline from all links */
+.header a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    margin-left: 10px; 
+}
+
+
+.logo:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+/* Navigation Links */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: white;
+}
+
+nav a:hover {
+    color: red;
+}
+
+/* Login Button */
+.login-btn {
+    background-color: #ff9800; /* Orange */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    border: none;
+}
+
+.login-btn:hover {
+    background-color: #e68900;
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #e63946; /* Dark Red */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    border: none;
+}
+
+.logout-btn:hover {
+    background-color: #c72c3b;
+}

@@ -1,0 +1,118 @@
+/* Background Overlay */
+.auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px); /* ✅ Blurry background effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Login Panel (Floating Glassmorphic Card) */
+.auth-container {
+    background: rgba(255, 255, 255, 0.12); /* ✅ Glass effect */
+    backdrop-filter: blur(15px); /* ✅ Frosted blur */
+    padding: 25px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideIn 0.3s ease-in-out;
+}
+
+/* Close Button (X) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+    color: #ff4d4d;
+}
+
+/* Input Fields */
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.auth-container input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.auth-container input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ff9800;
+}
+
+/* Login & Signup Buttons */
+.auth-btn {
+    background: linear-gradient(135deg, #ff9800, #ff5e00);
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.auth-btn:hover {
+    background: linear-gradient(135deg, #ff5e00, #ff9800);
+    transform: scale(1.05);
+}
+
+/* Login / Signup Toggle Text */
+.switch-auth {
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.switch-auth span {
+    color: #ff9800;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.switch-auth span:hover {
+    color: #ff5e00;
+}
+
+/* ✨ Smooth Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

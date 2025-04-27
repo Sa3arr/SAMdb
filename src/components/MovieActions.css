@@ -1,0 +1,88 @@
+.movie-actions {
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+/* General Button Styling */
+.circle-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #333;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: visible;
+}
+
+/* Expanding Effect on Hover */
+.circle-btn:hover {
+  width: 120px;
+  border-radius: 25px;
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+
+/* Tooltip Styling */
+.circle-btn .tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+  font-size: 12px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 4px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+  pointer-events: none;
+}
+
+/* Show Tooltip on Hover */
+.circle-btn:hover .tooltip {
+  opacity: 1;
+  bottom: -35px;  /* Moves slightly downward */
+}
+
+/* Like Button Active */
+.like-btn.liked {
+  background: pink;
+}
+
+/* Watchlist Button Active */
+.watchlist-btn.active {
+  background: gold;
+  color: black;
+}
+
+/* List Panel */
+.list-panel {
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.create-list-btn {
+  background: #444;
+  border: none;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
